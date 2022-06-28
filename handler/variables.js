@@ -8,7 +8,7 @@ blacklist: "false",
 blacklist_count: "0",
 blacklist_users: "",
 blacklist_server: "false",
-blacklist_servers: ""
+blacklist_servers: "",
 commands: "0",
 invite: "https://discord.gg/nmcEtFs35w",
 xp: "0",
