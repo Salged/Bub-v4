@@ -6,7 +6,7 @@ module.exports = {
 
 mobilePlatform: true,
 
-intents: ["GUILD_MESSAGES", "GUILDS"]
+intents: ["GUILD_MESSAGES", "GUILDS"],
     
 suppressAllErrors: false,
 errorMessage: [" ", "{newEmbed:{title: Неизвестная ошибка}{description:При исполнении команды произошла ошибка}{color:RED}}", "{actionRow:{button: Связаться с нами:5:https\\://discord.gg/9U8ny4U3TY}}"],
