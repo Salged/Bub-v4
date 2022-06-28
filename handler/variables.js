@@ -10,9 +10,9 @@ blacklist_users: "",
 blacklist_server: "false",
 blacklist_servers: "",
 commands: "0",
+color: "#00FF00",
 invite: "https://discord.gg/nmcEtFs35w",
 xp: "0",
-name: "**безымянный котя**",
-color: "00FF00"
+name: "**безымянный котя**"
 })
 }
