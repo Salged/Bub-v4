@@ -1,6 +1,6 @@
-const aoijs = require("aoi.js")
-const aoimongo = require("aoi.mongo")
-const config = require('./handler/config.js'); //This will be our configuration file. I didn't want your main file be messy. 
+const aoijs = require("aoi.js");
+const config = require('./handler/config.js');
+const aoimongo = require("aoi.mongo"); 
 const bot = new aoijs.Bot(config.Bot);
 bot.onMessage();
 const loader = new aoijs.LoadCommands(bot)
