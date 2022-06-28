@@ -13,6 +13,7 @@ commands: "0",
 color: "#00FF00",
 invite: "https://discord.gg/nmcEtFs35w",
 xp: "0",
-name: "**безымянный котя**"
+name: "**безымянный котя**",
+выбор: ""
 })
 }
