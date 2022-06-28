@@ -12,7 +12,7 @@
   "author": "Deglas",
   "license": "ISC",
   "dependencies": {
-    "aoi.js": "github:AkaruiDevelopment/aoi.js#v5",
+    "aoi.js": "5.2.0",
     "discord.js": "13.x",
     "aoi.mongo": "0.1.1"
   }
