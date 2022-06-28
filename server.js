@@ -2,7 +2,6 @@ const aoijs = require("aoi.js")
 const config = require('./handler/config.js'); //This will be our configuration file. I didn't want your main file be messy. 
 const bot = new aoijs.Bot(config.Bot);
 bot.onMessage();
-bot.onInteractionCreate();
 const loader = new aoijs.LoadCommands(bot)
 loader.load(bot.cmd, "./commands/")
 require('./handler/status')(bot) //This is for bot status file. 
