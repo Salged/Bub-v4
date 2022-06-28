@@ -10,7 +10,11 @@ intents: ["GUILD_MESSAGES", "GUILDS"],
     
 suppressAllErrors: false,
 errorMessage: [" ", "{newEmbed:{title: Неизвестная ошибка}{description:При исполнении команды произошла ошибка}{color:RED}}", "{actionRow:{button: Связаться с нами:5:https\\://discord.gg/9U8ny4U3TY}}"],
-    
+database: {
+     db: aoimongo,
+     type: "aoi.mongo",
+     path: "mongodb+srv://ayeban:QwEusLFVJ8wTwwn@djtape.gpkma.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+},    
     events: { functionError: true}
     }
 }
