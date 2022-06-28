@@ -7,5 +7,6 @@ loader.load(bot.cmd, "./commands/")
 require('./handler/status')(bot) //This is for bot status file. 
 require('./handler/variables')(bot)
 require('./handler/antiCrash')(bot) 
+require('./handler/callbacks')(bot) 
 require('./handler/ready')(bot)
 require('./handler/botJoins')(bot)
