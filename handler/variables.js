@@ -14,6 +14,6 @@ color: "#00FF00",
 invite: "https://discord.gg/nmcEtFs35w",
 xp: "0",
 name: "**безымянный котя**",
-выбор: ""
+mine_выбор: ""
 })
 }
