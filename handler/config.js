@@ -1,6 +1,6 @@
 module.exports = {
     Bot: {
-    token: "OTM2OTA2MTUzNTI5NTczMzc2.YfT_2Q.W4g2dNbHz_mZ5LS1x0qKlBjxJvc",
+    token: "OTM2OTA2MTUzNTI5NTczMzc2.GRxd6H.uefya2r7hl0HXGGMb1nxl8sHVrfGJtTsFnmZTk",
 
    prefix: ["+","<@$clientID>","<@!$clientID>"],
 
