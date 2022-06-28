@@ -11,6 +11,7 @@ blacklist_server: "false",
 blacklist_servers: ""
 commands: "0",
 invite: "https://discord.gg/nmcEtFs35w",
-xp: "0"
+xp: "0",
+name: "**безымянный котя**",
 })
 }
