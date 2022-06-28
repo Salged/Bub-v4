@@ -13,7 +13,7 @@ $onlyif[$getglobaluservar[blacklist]==false;{"embeds": "{newEmbed:{thumbnail:htt
     type: "interaction",
     prototype: "button",
     code: `$interactionReply[Напоминание успешно создано!]
-$setTimeout[walk_remind;m;{ "userID": "$authorid"}]
+$setTimeout[walk_remind;40m;{ "userID": "$authorid"}]
 $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];{"embeds": "{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description: Не вы вызвали данную команду}{color:RED}}", "ephemeral" : true, "options" : { "interaction" : true}}]
 $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==walkremind;]`
     }), ({
