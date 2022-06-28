@@ -10,10 +10,15 @@ $cooldown[30m;{"embeds": "{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis
 $onlyif[$getglobaluservar[blacklist]==false;{"embeds": "{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description:Вы заблокированы, обратитесь на [сервер поддержки]($getvar[invite]) для оказания вам помощи}{color:RED}}", "ephemeral" : true, "options" : { "interaction" : true}}]`
 }),
 ({
-type: "interaction",
-prototype: "button",
-code: `$interactionReply[$getuservar[выбор]]
+    type: "interaction",
+    prototype: "button",
+    code: `$interactionReply[Напоминание успешно создано!]
+$setTimeout[mine_remind;m;{ "userID": "$authorid"}]
 $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];{"embeds": "{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description: Не вы вызвали данную команду}{color:RED}}", "ephemeral" : true, "options" : { "interaction" : true}}]
-$onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==добыть;]
-`
-})]
+$onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==mineremind;]`
+    }), ({
+    name: "mine_remind",
+    type: "timeout",
+    code: `$sendDM[Команда \`mine\` снова доступна!;$timeoutdata[userID]]
+$onlyif[$isuserdmenabled[$timeoutdata[userID]]==true;]`
+    })]
