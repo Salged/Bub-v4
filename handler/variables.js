@@ -10,6 +10,7 @@ blacklist_users: "",
 blacklist_server: "false",
 blacklist_servers: ""
 commands: "0",
-invite: "https://discord.gg/nmcEtFs35w"
+invite: "https://discord.gg/nmcEtFs35w",
+xp: "0"
 })
 }
