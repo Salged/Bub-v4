@@ -1,5 +1,5 @@
-module.exports = (bot) => { bot.guildJoinCommand({
-//command
+module.exports = (bot) => { 
+bot.guildJoinCommand({
 channel: "$getvar[servers]",
     code: `$title[1;Бота добавили на новый сервер] $description[1;Сервер: $servername | $guildid
 Владелец: $usertag[$ownerid]
