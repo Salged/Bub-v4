@@ -17,7 +17,7 @@ $onlyif[$getglobaluservar[blacklist]==false;{"embeds": "{newEmbed:{thumbnail:htt
     code: `$interactionReply[Напоминание успешно создано!]
 $setTimeout[build_remind;50m;{ "userID": "$authorid"}]
 $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];{"embeds": "{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description: Не вы вызвали данную команду}{color:RED}}", "ephemeral" : true, "options" : { "interaction" : true}}]
-$onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==mineremind;]`
+$onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==buildremind;]`
     }), ({
     name: "build_remind",
     type: "timeout",
