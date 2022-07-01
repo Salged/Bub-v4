@@ -19,7 +19,7 @@ lvl: "0",
 sledxp: "50",
 md: "0",
 build_выбор: "",
-vers: "3.0.0-dev"
+vers: "3.0.0-dev",
 img: "https://media.discordapp.net/attachments/838794366423662672/937928398322425897/prxL3R2.jpg",
 скин_1: "",
 скин_2: "",
