@@ -8,7 +8,7 @@ $interactionReply[;{newEmbed:{title:Профиль $username[$get[id]]}{thumbnai
 $getVar[wallet] ・ Бубкойны: **$numberSeparator[$getUserVar[korm;$get[id]];.]**
 🌈 ・ Настроение: **$replaceText[$replaceText[$checkCondition[$getUserVar[md;$get[id]]<150];true;Плохое];false;Хорошее]**
 🛡️ ・ Лвл: **$numberSeparator[$getUserVar[lvl;$get[id]];.]**
-⚗️ ・ Xp: **$numberSeparator[$getUserVar[xp;$get[id]];.]/$numberSeparator[$getUserVar[sledxp;$get[id]];.]**}{color:$getvar[color]}}]
+⚗️ ・ Xp: **$numberSeparator[$getUserVar[xp;$get[id]];.]/$numberSeparator[$getUserVar[sledxp;$get[id]];.]**}{color:$getvar[color]}{image:$getuservar[img]}}]
 $let[id;$replacetext[$interactiondata[options.data[0].value];undefined;$authorid]]
 $onlyif[$getglobaluservar[blacklist]==false;{"embeds": "{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description:Вы заблокированы, обратитесь на [сервер поддержки]($getvar[invite]) для оказания вам помощи}{color:RED}}", "ephemeral" : true, "options" : { "interaction" : true}}]`
 })
