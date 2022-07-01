@@ -10,13 +10,14 @@ blacklist_users: "",
 blacklist_server: "false",
 blacklist_servers: "",
 commands: "0",
-color: "#00FF00",
+color: "#FF6F01",
 invite: "https://discord.gg/nmcEtFs35w",
 xp: "0",
 name: "**безымянный котя**",
 mine_выбор: "",
 lvl: "0",
 md: "0",
-build_выбор: ""
+build_выбор: "",
+vers: "3.0.0-dev"
 })
 }
