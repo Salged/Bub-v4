@@ -1,0 +1,9 @@
+module.exports = ({
+name: "bot",
+type: "interaction",
+prototype: "slash",
+code: `$setvar[commands;$sum[$getvar[commands];1]]
+$channelsendmessage[$getvar[logchannel];$guildid {newEmbed:{title: Использована новая команда}{description:**Сервер:** $servername  \n**Пользователь:** $usertag | $authorid \n**Команда:** $commandname}}]
+$interactionReply[;{newEmbed:{title:$usertag[$clientid] information}{thumbnail:$userAvatar[$clientid]}{field:Статистика бота:>>> **Всего пользователей:** $allMemberscount \n**Всего серверов:** $servercount \n**Команд использовано:** $getvar[commands]:no}{field:Другое:>>> **Включился:** <t:$round[$divide[$djseval[Date.now() - client.uptime;yes];1000]]:R> \n**Разработчик:** [$usertag[$botownerid]](https://discord.com/users/920735973694902312) \n**Задержка бота:** $replaceText[$replaceText[$checkCondition[$ping<20];true;$pingms ⚪];false;$replaceText[$replaceText[$checkCondition[$ping<25];true;$pingms 🟢];false;$replaceText[$replaceText[$checkCondition[$ping<30];true;$pingms 🟡 ];false;$replaceText[$replaceText[$checkCondition[$ping<40];true;$pingms 🟠 ];false;$replaceText[$replaceText[$checkCondition[$ping<50];true;$pingms 🔴 ];false;$replaceText[$replaceText[$checkCondition[$ping<60];true;$pingms ⚫ ];false;ауе]]]]]] :no}{field:Версия:>>> **Версия бота:** $getvar[vers]:no}{color:$getvar[color]}};{actionRow:{button:Добавить бота:5:$noneEscape[https\\://discord.com/api/oauth2/authorize?client_id=936906153529573376&scope=bot+applications.commands&permissions=446676991041]}}]
+$onlyif[$getglobaluservar[blacklist]==false;{"embeds": "{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description:Вы заблокированы, обратитесь на [сервер поддержки]($getvar[invite]) для оказания вам помощи}{color:RED}}", "ephemeral" : true, "options" : { "interaction" : true}}]`
+})
