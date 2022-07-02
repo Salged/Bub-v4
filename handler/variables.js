@@ -26,6 +26,6 @@ img: "https://media.discordapp.net/attachments/838794366423662672/93792839832242
 скин_3: "",
 скин_4: "",
 скин_5: "",
-lang: "ru"
+commandsError: "0"
 })
 }
