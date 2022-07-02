@@ -4,7 +4,7 @@ type: "interaction",
 prototype: "slash",
 code: `$setvar[commands;$sum[$getvar[commands];1]]
 $channelsendmessage[$getvar[logchannel];$guildid {newEmbed:{title: Использована новая команда}{description:**Сервер:** $servername  \n**Пользователь:** $usertag | $authorid \n**Команда:** $commandname}}]
-$interactionReply[;{newEmbed:{title:$replacetext[$replacetext[$getservervar[lang];ru;Профиль];en;Profile] $username[$get[id]]}{thumbnail:$userAvatar[$get[id]]}{description:❤️ ・ Имя: **$getUserVar[name;$get[id]]**
+$interactionReply[;{newEmbed:{title:Профиль $username[$get[id]]}{thumbnail:$userAvatar[$get[id]]}{description:❤️ ・ Имя: **$getUserVar[name;$get[id]]**
 $getVar[wallet] ・ Бубкойны: **$numberSeparator[$getUserVar[korm;$get[id]];.]**
 🌈 ・ Настроение: **$replaceText[$replaceText[$checkCondition[$getUserVar[md;$get[id]]<150];true;Плохое];false;Хорошее]** ($getuservar[md]/150)
 🛡️ ・ Уровень: **$numberSeparator[$getUserVar[lvl;$get[id]];.]**
