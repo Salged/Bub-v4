@@ -10,5 +10,5 @@ $getVar[wallet] ・ $replacetext[$replacetext[$getservervar[lang];ru;Бубко�
 🛡️ ・ $replacetext[$replacetext[$getservervar[lang];ru;Лвл];en;Level]: **$numberSeparator[$getUserVar[lvl;$get[id]];.]**
 ⚗️ ・ Xp: **$numberSeparator[$getUserVar[xp;$get[id]];.]/$numberSeparator[$getUserVar[sledxp;$get[id]];.]**}{color:$getvar[color]}{image:$getuservar[img]}}]
 $let[id;$replacetext[$interactiondata[options.data[0].value];undefined;$authorid]]
-$onlyif[$getglobaluservar[blacklist]==false;{"embeds": "{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description:Вы заблокированы, обратитесь на [сервер поддержки]($getvar[invite]) для оказания вам помощи}{color:RED}}", "ephemeral" : true, "options" : { "interaction" : true}}]`
+$onlyif[$getglobaluservar[blacklist]==false;{"embeds": "{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description: $replacetext[$replacetext[$getservervar[lang];ru;Вы заблокированы, обратитесь на [сервер поддержки]($getvar[invite]) для оказания вам помощи];en;You are blocked, please contact [support server]($getvar[invite]) for help]}{color:RED}}", "ephemeral" : true, "options" : { "interaction" : true}}]`
 })
