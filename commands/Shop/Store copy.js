@@ -1,5 +1,5 @@
 module.exports = ({
-name: "shop",
+name: "store",
 type: "interaction",
 prototype: "slash",
 code: `$setvar[commands;$sum[$getvar[commands];1]]
