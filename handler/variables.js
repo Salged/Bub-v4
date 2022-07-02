@@ -26,6 +26,26 @@ img: "https://media.discordapp.net/attachments/838794366423662672/93792839832242
 скин_3: "",
 скин_4: "",
 скин_5: "",
-commandsError: "0"
+commandsError: "0",
+цена_1: "none",
+цена_2: "none",
+цена_3: "none",
+цена_4: "none",
+цена_5: "none",
+цена_6: "none",
+цена_7: "none",
+цена_8: "none",
+цена_9: "none",
+цена_10: "none",
+роль_1: "none",
+роль_2: "none",
+роль_3: "none",
+роль_4: "none",
+роль_5: "none",
+роль_6: "none",
+роль_7: "none",
+роль_8: "none",
+роль_9: "none",
+роль_10: "none"
 })
 }
