@@ -1,6 +1,6 @@
 module.exports = ({
 
-name: "buyrole",
+name: "buy_role",
 
 type: "interaction",
 
