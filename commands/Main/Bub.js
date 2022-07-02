@@ -6,7 +6,7 @@ code: `$setvar[commands;$sum[$getvar[commands];1]]
 $channelsendmessage[$getvar[logchannel];$guildid {newEmbed:{title: Использована новая команда}{description:**Сервер:** $servername  \n**Пользователь:** $usertag | $authorid \n**Команда:** $commandname}}]
 $interactionReply[;{newEmbed:{title:Профиль $username[$get[id]]}{thumbnail:$userAvatar[$get[id]]}{description:❤️ ・ Имя: **$getUserVar[name;$get[id]]**
 $getVar[wallet] ・ Бубкойны: **$numberSeparator[$getUserVar[korm;$get[id]];.]**
-🌈 ・ Настроение: **$replaceText[$replaceText[$checkCondition[$getUserVar[md;$get[id]]<150];true;Плохое];false;Хорошее]**
+🌈 ・ Настроение: **$replaceText[$replaceText[$checkCondition[$getUserVar[md;$get[id]]<150];true;Плохое];false;Хорошее]** ($getuservar[md]/150)
 🛡️ ・ Лвл: **$numberSeparator[$getUserVar[lvl;$get[id]];.]**
 ⚗️ ・ Xp: **$numberSeparator[$getUserVar[xp;$get[id]];.]/$numberSeparator[$getUserVar[sledxp;$get[id]];.]**}{color:$getvar[color]}{image:$getuservar[img]}}]
 $let[id;$replacetext[$interactiondata[options.data[0].value];undefined;$authorid]]
