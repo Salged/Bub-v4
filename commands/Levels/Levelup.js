@@ -6,6 +6,6 @@ code: `
 
 $setUserVar[lvl;$sum[$getUserVar[lvl];1]]
 $setUserVar[xp;0]
-$setUserVar[sledxp;$sum[$getUserVar[sledxp];150]]
+$setUserVar[sledxp;$sum[$getUserVar[sledxp];100]]
 $onlyIf[$getUserVar[xp]>=$getUserVar[sledxp];]`
 })
