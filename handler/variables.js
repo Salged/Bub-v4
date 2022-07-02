@@ -49,6 +49,7 @@ commandsError: "0",
 роль_10: "none",
 chest_1: "3",
 chest_2: "1",
-chest_3: "0"
+chest_3: "0",
+bank: "0"
 })
 }
