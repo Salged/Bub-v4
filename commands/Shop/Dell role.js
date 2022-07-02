@@ -1,6 +1,6 @@
 module.exports = ({
 
-name: "dellrole",
+name: "delete_role",
 
 type: "interaction",
 
