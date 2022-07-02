@@ -1,6 +1,6 @@
 module.exports = ({
 
-name: "addrole",
+name: "add_role",
 
 type: "interaction",
 
