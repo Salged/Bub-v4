@@ -8,7 +8,11 @@ $interactionReply[;{newEmbed:{title:Профиль $username[$get[id]]}{thumbnai
 $getVar[wallet] ・ Бубкойны: **$numberSeparator[$getUserVar[korm;$get[id]];.]**
 🌈 ・ Настроение: **$replaceText[$replaceText[$checkCondition[$getUserVar[md;$get[id]]<150];true;Плохое];false;Хорошее]** ($getuservar[md]/150)
 🛡️ ・ Уровень: **$numberSeparator[$getUserVar[lvl;$get[id]];.]**
-⚗️ ・ Xp: **$numberSeparator[$getUserVar[xp;$get[id]];.]/$numberSeparator[$getUserVar[sledxp;$get[id]];.]**}{color:$getvar[color]}{image:$getuservar[img]}}]
+⚗️ ・ Xp: **$numberSeparator[$getUserVar[xp;$get[id]];.]/$numberSeparator[$getUserVar[sledxp;$get[id]];.]**
+💳 ・ На банковском счету: **$getuservar[bank;$get[id]]**
+$customEmoji[q_chest_1] ・ Обычных: **$getuservar[chest_1;$get[id]]**
+$customEmoji[q_chest_2] ・ Редких: **$getuservar[chest_2;$get[id]]**
+$customEmoji[q_chest_3] ・ Эпических: **$getuservar[chest_3;$get[id]]**}{color:$getvar[color]}{image:$getuservar[img]}}]
 $let[id;$replacetext[$interactiondata[options.data[0].value];undefined;$authorid]]
 $onlyif[$getglobaluservar[blacklist]==false;{"embeds": "{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description:Вы заблокированы, обратитесь на [сервер поддержки]($getvar[invite]) для оказания вам помощи}{color:RED}}", "ephemeral" : true, "options" : { "interaction" : true}}]`
 })
