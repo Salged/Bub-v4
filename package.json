@@ -12,9 +12,8 @@
   "author": "Deglas",
   "license": "ISC",
   "dependencies": {
-    "aoi.js": "5.2.0",
+    "aoi.js": "5.5.0",
     "discord.js": "13.x",
-    "aoi.mongo": "0.1.1",
-    "canvacord": "^5.2.3"
+    "aoi.mongo": "0.1.1"
   }
 }
