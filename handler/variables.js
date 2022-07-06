@@ -50,6 +50,7 @@ commandsError: "0",
 chest_1: "3",
 chest_2: "1",
 chest_3: "0",
-bank: "0"
+bank: "0",
+учёный_выбор: ""
 })
 }
