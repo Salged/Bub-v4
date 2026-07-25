@@ -1,17 +1,38 @@
-module.exports = (bot) => {
-    process.on('unhandledRejection', (reason, p) => {
-        console.log(' [antiCrash] :: Unhandled Rejection/Catch');
-        console.log(reason, p);
+module.exports = (client) => {
+    // Необработанные отклонения Promise
+    process.on('unhandledRejection', (reason, promise) => {
+        console.error('❌ [antiCrash] Unhandled Rejection:');
+        console.error(reason);
+        if (promise) console.error(promise);
     });
-    process.on("uncaughtException", (err, origin) => {
-        console.log(' [antiCrash] :: Uncaught Exception/Catch');
-        console.log(err, origin);
-    }); process.on('uncaughtExceptionMonitor', (err, origin) => {
-        console.log(' [antiCrash] :: Uncaught Exception/Catch (MONITOR)');
-        console.log(err, origin);
+
+    // Непойманные исключения
+    process.on('uncaughtException', (error, origin) => {
+        console.error('❌ [antiCrash] Uncaught Exception:');
+        console.error(error);
+        console.error('Origin:', origin);
+        // Не выключаем бота, а просто логируем
     });
-    process.on('multipleResolves', (type, promise, reason, origin) => {
-        console.log(' [antiCrash] :: Multiple Resolves');
-        console.log(type, reason, promise, origin);
+
+    // Монитор непойманных исключений (Node.js 16+)
+    process.on('uncaughtExceptionMonitor', (error, origin) => {
+        console.error('❌ [antiCrash] Uncaught Exception Monitor:');
+        console.error(error);
+        console.error('Origin:', origin);
     });
-}
+
+    // Множественные разрешения Promise
+    process.on('multipleResolves', (type, promise, reason) => {
+        console.warn('⚠️ [antiCrash] Multiple Resolves:');
+        console.warn('Type:', type);
+        console.warn('Reason:', reason);
+        console.warn('Promise:', promise);
+    });
+
+    // Завершение процесса (для отладки)
+    process.on('exit', (code) => {
+        console.log(`🛑 [antiCrash] Process exited with code: ${code}`);
+    });
+
+    console.log('✅ [antiCrash] Защита включена!');
+};
