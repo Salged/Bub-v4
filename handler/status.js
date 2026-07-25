@@ -1,6 +1,6 @@
 module.exports = (bot) => {
     bot.status({
-  text: "$numberseparator[$allmemberscount;.] users | $numberseparator[$servercount;.] guilds",
+  text: "$numberseparator[$allmemberscount;.] пользователей | $numberseparator[$servercount;.] серверов",
   type: "WATCHING",
   time: 60
 });
@@ -11,7 +11,7 @@ bot.status({
       time: 60
 });
 bot.status({
-  text: "$hour:$minute MSK $timezone[Europe/Moscow]",
+  text: "$hour:$minute МСК $timezone[Europe/Moscow]",
   type: "LISTENING",
   time: 60
 })
