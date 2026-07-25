@@ -1,6 +1,7 @@
 module.exports = {
     name: "deploy",
     code: `
+        ГОТОВО!
     $djsEval[
 (async () => {
   const { ApplicationCommandOptionType } = require("discord.js");
@@ -354,5 +355,6 @@ module.exports = {
   return "✅ Все 22 глобальные команды успешно созданы!";
 })()
 ]
+$onlyif[$authorID==920735973694902312;У вас нет прав]    
 `
 }
