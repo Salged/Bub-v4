@@ -9,4 +9,4 @@ $description[1;
 $commandinfo[$message;code]\`\`\`]
 $onlyif[$charCount[$message]>0;$getServerVar[error] **Correct usage:** \`\`\`js
 $tolowercase[$commandname] < file name >\`\`\`]
-$onlyForIDs[$botOwnerID;;]`}
+$onlyForIDs[$clientOwnerIDs;;]`}
