@@ -1,4 +1,6 @@
-const aoijs = require("aoi.js");
+const { AoiClient } = require('aoi.js');
+const config = require('./config/constants');
+const variables = require('./config/variables');
 const aoimongo = require("aoi.mongo"); 
 const bot = new aoijs.Bot({
 token: "OTM2OTA2MTUzNTI5NTczMzc2.GRxd6H.uefya2r7hl0HXGGMb1nxl8sHVrfGJtTsFnmZTk",
