@@ -15,6 +15,7 @@
     "aoi.js": "latest",
     "discord.js": "latest",
     "mongodb": "latest",
-    "aoi.mongo": "latest"
+    "aoi.mongo": "latest",
+    "@aoijs/aoi.db": "latest"
   }
 }
