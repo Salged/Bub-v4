@@ -9,6 +9,5 @@ $message
 $exec[$message]
 \`\`\`} {color:$getGlobalUserVar[color]}};no]
 $suppressErrors[{error}]
-$onlyforids[$clientownerids;]
-`
+ $onlyif[$authorID==920735973694902312;У вас нет прав]`
 })
