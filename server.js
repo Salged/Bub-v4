@@ -59,7 +59,6 @@ bot.loadCommands("./commands/", true);
 // Подключение дополнительных обработчиков (статус, переменные, антикраш и т.д.)
 require('./handler/status')(bot);
 require('./handler/antiCrash')(bot);
-require('./handler/callbacks')(bot);
 require('./handler/ready')(bot);
 require('./handler/botJoins')(bot);
 
