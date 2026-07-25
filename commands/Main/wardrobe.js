@@ -5,7 +5,7 @@ prototype: "slash",
 code: `$setvar[commands;$sum[$getvar[commands];1]]
 $channelsendmessage[$getvar[logchannel];$guildid {newEmbed:{title: Использована новая команда}{description:**Сервер:** $$guildname | $guildid  \n**Пользователь:** $usertag | $authorid \n**Команда:** $commandname}}]
 
-$interactionReply[;{newEmbed:{title:Ваш шкаф одежды на Буба}{thumbnail:$userAvatar}{field:Выберите нужный вам скин:1️⃣ — Зимний Буб
+$interactionReply[{newEmbed:{title:Ваш шкаф одежды на Буба}{thumbnail:$userAvatar}{field:Выберите нужный вам скин:1️⃣ — Зимний Буб
 2️⃣ — Дракон Буб
 3️⃣ — Болотный Буб
 4️⃣ — Буб с дамами
