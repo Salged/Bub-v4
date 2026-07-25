@@ -1,7 +1,7 @@
-module.exports = (bot) => [{ 
+module.exports = [{ 
 name "guildjoin",
-type: "guildJoin",
 channel: "$getvar[servers]",
+type: "guildJoin",
 code: `$title[1;Бота добавили на новый сервер] $description[1;Сервер: $guildname | $guildid
 Владелец: $usertag[$ownerid]
 Пользователей: $memberscount] 
@@ -14,8 +14,8 @@ code: `$clientLeave[$guildid]`
 },
 {
     name: "guildLeave",
-    type: "guildLeave",
     channel: "$getvar[servers]",
+     type: "guildLeave",
     code: `$title[1;Бота убрали с сервера] $description[1;Сервер: $servername | $guildid
 Владелец: $usertag[$ownerid]
 Пользователей: $memberscount] $color[1;RED]`
