@@ -3,16 +3,12 @@ const config = require("./config.json"); // если есть файл конф�
 const aoimongo = require("@akarui/aoi.mongo"); // пакет для MongoDB
 
 const bot = new AoiClient({
-  // Токен – приоритет у переменной окружения, иначе из конфига
   token: process.env.TOKEN || config.BotToken,
 
-  // Массив префиксов (включая упоминания бота)
   prefix: ["+", "<@$clientID>", "<@!$clientID>"],
 
-  // Мобильный статус (отображается как "играет на мобильном")
   mobilePlatform: true,
 
-  // Интенты для Discord.js v14 (новые названия)
   intents: [
     "MessageContent",
     "Guilds",
@@ -23,7 +19,6 @@ const bot = new AoiClient({
     "GuildEmojisAndStickers"
   ],
 
-  // События, которые будут обрабатываться
   events: [
     "onMessage",
     "onInteractionCreate",
@@ -34,14 +29,12 @@ const bot = new AoiClient({
     "onBanAdd",
     "onBanRemove",
     "onGuildJoin",
-    "onFunctionError"
+    "onFunctionError",
+    "onGuildLeave"
   ],
-
-  // Отключаем лишние логи и предупреждения
   aoiLogs: false,
   aoiWarning: false,
 
-  // Подключение к MongoDB через aoi.mongo
   database: {
     type: "aoi.mongo",
     db: aoimongo,
@@ -57,7 +50,6 @@ const bot = new AoiClient({
     "{actionRow:{button: Связаться с нами:5:https\\://discord.gg/nmcEtFs35w}}"
   ],
 
-  // Защита: запрещаем использовать $clientToken в коде
   disableFunctions: ["$clientToken"]
 });
 
