@@ -10,7 +10,7 @@ $onlyif[$getservervar[blacklist_server]==false;{execute:bot_leave}]` },
 {
 type: "awaited",
 name: "bot_leave",
-code: `$clientLeave`
+code: `$clientLeave[$guildid]`
 },
 {
     name: "guildLeave",
