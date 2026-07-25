@@ -1,6 +1,5 @@
 const { AoiClient } = require("aoi.js");
 const config = require("./config.json"); // если есть файл конфига
-const aoimongo = require("@akarui/aoi.mongo"); // пакет для MongoDB
 
 const bot = new AoiClient({
   token: process.env.TOKEN || config.BotToken,
