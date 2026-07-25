@@ -5,7 +5,7 @@ module.exports = [{
     prototype: "slash",
     code: `$setvar[commands;$sum[$getvar[commands];1]]
 
-$channelsendmessage[$getvar[logchannel];{newEmbed:{title: Использована новая команда}{description:**Сервер:** $guildname $guildid | $guildid \n**Пользователь:** $usertag | $authorid \n**Команда:** $commandname}}]
+$channelsendmessage[$getvar[logchannel];{newEmbed:{title: Использована новая команда}{description:**Сервер:** $guildname | $guildid \n**Пользователь:** $usertag | $authorid \n**Команда:** $commandname}}]
 
 $if[$randomtext[1;2;1;2]==1]
 $setuservar[korm;$sum[$getuservar[korm];$get[amount]]]
