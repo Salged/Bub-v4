@@ -1,7 +1,7 @@
 const aoijs = require("aoi.js");
 const aoimongo = require("aoi.mongo"); 
 const bot = new aoijs.Bot({
-token: "MTUzMDYzMzA0MTA3MTA1MDk0Mw.G0W8RT.elVqELzO2-P7hi9OIpDVGZnTxoRr8fgjq5y0qE",
+token: MTUzMDYzMzA0MTA3MTA1MDk0Mw.Gxx8ag.nsgd-qGc1NBFY_343qlAz3YLK4v4f_tBq_rY3c",
    prefix: ["+","<@$clientID>","<@!$clientID>"],
 mobilePlatform: true,
 intents: ["GUILD_MESSAGES", "GUILDS"],   
