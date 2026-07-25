@@ -7,15 +7,12 @@
     "start": "node server.js"
   },
   "engines": {
-    "node": "16.x"
+    "node": "20.x"
   },
   "author": "Deglas",
   "license": "ISC",
   "dependencies": {
     "aoi.js": "latest",
-    "discord.js": "latest",
-    "mongodb": "latest",
-    "aoi.mongo": "latest",
     "@aoijs/aoi.db": "latest"
   }
 }
