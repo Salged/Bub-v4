@@ -56,7 +56,4 @@ const bot = new AoiClient({
 // Загрузка команд из папки ./commands/ (второй аргумент – логировать загрузку)
 bot.loadCommands("./commands/", true);
 
-
-require('./handler/botJoins')(bot);
-
 bot.variables(require("./handler/variables.js"));
