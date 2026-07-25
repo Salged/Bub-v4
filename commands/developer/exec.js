@@ -9,6 +9,6 @@ $message
 $exec[$message]
 \`\`\`} {color:$getGlobalUserVar[color]}};no]
 $suppressErrors[{error}]
-$onlyforids[$botownerid;]
+$onlyforids[$clientownerids;]
 `
 })
