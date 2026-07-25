@@ -1,13 +1,7 @@
 module.exports = ({
-
 name: "chest",
-
-
-
 type: "interaction",
-
 prototype: "slash",
-
 code: `$setvar[commands;$sum[$getvar[commands];1]]
 
 $channelsendmessage[$getvar[logchannel];{newEmbed:{title: Использована новая команда}{description:**Сервер:** $servername | $guildid \n**Пользователь:** $usertag | $authorid \n**Команда:** $commandname}}]
