@@ -36,12 +36,13 @@ const bot = new AoiClient({
   aoiWarning: false,
 
   database: {
-    type: "aoi.mongo",
-    db: aoimongo,
-    path: "mongodb+srv://root:root@cluster0.wcbv979.mongodb.net/?appName=Cluster0", // ваша строка подключения
-    tables: ["main"] // таблицы (коллекции) для хранения данных
-  },
-
+        type: "aoi.db",
+        db: require("@aoijs/aoi.db"),
+        dbType: "KeyValue",
+        tables: ["main"],
+        securityKey: "12345678901234567890123456789012",
+        path: "/app/data";
+    },
   // Обработка ошибок выполнения команд
   suppressAllErrors: true,
   errorMessage: [
@@ -57,7 +58,6 @@ const bot = new AoiClient({
 bot.loadCommands("./commands/", true);
 
 // Подключение дополнительных обработчиков (статус, переменные, антикраш и т.д.)
-require('./handler/status')(bot);
 require('./handler/antiCrash')(bot);
 require('./handler/ready')(bot);
 require('./handler/botJoins')(bot);
