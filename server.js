@@ -11,7 +11,7 @@ database: {
      db: aoimongo,
     table: ["main"],
      type: "aoi.mongo",
-     path: "mongodb+srv://ayeban:QwEusLFVJ8wTwwn@djtape.gpkma.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+     path: "mongodb+srv://root:root@cluster0.wcbv979.mongodb.net/?appName=Cluster0"
     },
 events: { functionError: true} 
 });
