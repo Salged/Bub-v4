@@ -56,9 +56,7 @@ const bot = new AoiClient({
 // Загрузка команд из папки ./commands/ (второй аргумент – логировать загрузку)
 bot.loadCommands("./commands/", true);
 
-// Подключение дополнительных обработчиков (статус, переменные, антикраш и т.д.)
-require('./handler/antiCrash')(bot);
-require('./handler/ready')(bot);
+
 require('./handler/botJoins')(bot);
 
 bot.variables(require("./handler/variables.js"));
