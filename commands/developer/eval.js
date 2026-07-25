@@ -1,6 +1,6 @@
 module.exports = ({
   name: "e",
 code: `
-$eval[$message;no;yes] $onlyForIDs[$botownerid;net]
+$eval[$message;no;yes] $onlyForIDs[clientownerids;net]
 `
 })
