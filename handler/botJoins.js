@@ -1,5 +1,5 @@
 module.exports = (bot) => [{ 
-name "guild join"
+name "guild join",
 type: "guildJoin",
 channel: "$getvar[servers]",
 code: `$title[1;Бота добавили на новый сервер] $description[1;Сервер: $guildname | $guildid
