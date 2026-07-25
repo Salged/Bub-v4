@@ -1,5 +1,6 @@
 module.exports = (bot) => {
-bot.readyCommand({
+name: "readyc",
+type: "readyCommand",
 channel: "$getvar[logchannel]",
 code: `
 Загружен за       : $numberSeparator[$divide[$sub[$dateStamp;$get[time]];10]]s 
