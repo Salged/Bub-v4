@@ -1,5 +1,4 @@
-module.exports= (bot) =>{
-bot.variables({ 
+module.exports = { 
 logchannel: "945968304672083978",
 servers: "945968304672083978",
 korm: "100",
@@ -52,5 +51,4 @@ chest_2: "1",
 chest_3: "0",
 bank: "0",
 учёный_выбор: ""
-})
 }
