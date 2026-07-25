@@ -41,7 +41,7 @@ const bot = new AoiClient({
         dbType: "KeyValue",
         tables: ["main"],
         securityKey: "12345678901234567890123456789012",
-        path: "/app/data";
+        path: "/app/data",
     },
   // Обработка ошибок выполнения команд
   suppressAllErrors: true,
