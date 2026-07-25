@@ -3,7 +3,7 @@ name: "rank",
 type: "interaction",
 prototype: "slash",
 code: `$setvar[commands;$sum[$getvar[commands];1]]
-$channelsendmessage[$getvar[logchannel];$guildid {newEmbed:{title: Использована новая команда}{description:**Сервер:** $guildname  \n**Пользователь:** $usertag | $authorid \n**Команда:** $commandname}}]
+$channelsendmessage[$getvar[logchannel];{newEmbed:{title: Использована новая команда}{description:**Сервер:** $guildname | $guildID \n**Пользователь:** $usertag | $authorid \n**Команда:** $commandname}}]
 
 $interactionReply[{newEmbed:{title:Карточка $usertag[$get[id]]}{image:https://vacefron.nl/api/rankcard?username=$replaceText[$username[$get[id]]; ;+]&avatar=$userAvatar[$get[id]]&level=$getUserVar[lvl;$get[id]]&rank=&currentxp=$getUserVar[xp;$get[id]]&nextlevelxp=$getUserVar[sledxp;$get[id]]&previouslevelxp=0&custombg=https://i.imgur.com/EBPIwMZ.jpeg&xpcolor=$getvar[color]&isboosting=$isBoosting[$get[id]]}{color:$getvar[color]}}]
 $let[id;$replacetext[$interactiondata[options.data[0].value];undefined;$authorid]]
