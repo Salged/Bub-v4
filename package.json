@@ -12,9 +12,9 @@
   "author": "Deglas",
   "license": "ISC",
   "dependencies": {
-    "aoi.js": "5.5.0",
-    "discord.js": "13.x",
-"mongodb": "4.4.0",
+    "aoi.js": "latest",
+    "discord.js": "latest",
+    "mongodb": "4.4.0",
     "aoi.mongo": "0.1.1"
   }
 }
