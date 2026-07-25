@@ -4,7 +4,7 @@ type: "interaction",
 prototype: "slash",
 code: `$setvar[commands;$sum[$getvar[commands];1]]
 
-$channelsendmessage[$getvar[logchannel];$guildid {newEmbed:{title: Использована новая команда}{description:**Сервер:** $servername  \n**Пользователь:** $guildname | $authorid \n**Команда:** $commandname}}]
+$channelsendmessage[$getvar[logchannel];$guildid {newEmbed:{title: Использована новая команда}{description:**Сервер:** $guildname | $guildid  \n**Пользователь:** $username | $authorid \n**Команда:** $commandname}}]
 
 $setuservar[korm;$sum[$getuservar[korm];$random[3000;5000]]]
 $setuservar[xp;$sum[$getuservar[xp];$random[20;40]]]
