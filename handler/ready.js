@@ -1,4 +1,4 @@
-module.exports = (bot) => {
+module.exports = (client) => {
 name: "readyc",
 type: "readyCommand",
 channel: "$getvar[logchannel]",
