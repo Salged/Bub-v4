@@ -352,7 +352,27 @@ module.exports = {
     description: "Список команд бота"
   });
 
-  return "✅ Все 22 глобальные команды успешно созданы!";
+  // 23. rank (как bub, но с карточкой)
+await commands.create({
+    name: "rank",
+    description: "Посмотреть карточку пользователя",
+    options: [
+        {
+            type: ApplicationCommandOptionType.User,
+            name: "member",
+            description: "пользователь, карточку которого вы хотите посмотреть",
+            required: false
+        }
+    ]
+});
+
+// 24. science (как mine)
+await commands.create({
+    name: "science",
+    description: "Работа учёным"
+});
+
+  return "✅ Все 24 глобальные команды успешно созданы!";
 })()
 ]
 $onlyif[$authorID==920735973694902312;У вас нет прав]    
