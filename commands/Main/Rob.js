@@ -25,7 +25,7 @@ $endif
 $let[amount;$round[$multi[$random[5;15];$get[money]]]]
 $let[money;$round[$divide[$getuservar[korm;$interactiondata[options.data[0].value]];100]]]
 
-$cooldown[90m;{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description: Подождите %hour%ч. %min%м.}{color:$getvar[color_error]}}{ephemeral}{interaction}]
+
 
 $onlyif[$getuservar[korm]>=500;{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description:У вас на руках должно быть минимум 500$getvar[wallet]}{color:$getvar[color_error]}}{ephemeral}{interaction}]
 
