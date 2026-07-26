@@ -9,7 +9,7 @@ $channelsendmessage[$getvar[logchannel];$guildid {newEmbed:{title: Исполь�
 $setuservar[учёный_выбор;$randomText[вирус;вакцина;расчёт]]
 $interactionReply[{newEmbed:{author:Работа в лаборатории:$useravatar}{field:Ваша задача#COLON# **$replaceText[$replaceText[$replaceText[$randomText[вирус;вакцина;расчёт];вирус;изучить вирус];вакцина;изобрести вакцину];расчёт;делать расчёты]**:\n🦠 - изучить вирус\n⚗️ - изобрести вакцину\n📊 - делать расчёты}{color:$getvar[color]}}{actionRow:{button:🦠:2:вирус_$authorid}{button:⚗️:2:вакцина_$authorid}{button:📊:2:расчёт_$authorid}}{actionRow:{button: Напомнить:1:учёныйremind_$authorid}}]
 
-$cooldown[70m;{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description:Ваш Буб устал, приходите через %time%}{color:$getvar[color_error]}}{ephemeral}{interaction}]
+$cooldown[70m;{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description:Ваш Буб устал, приходите через %hour%ч. %min%м.}{color:$getvar[color_error]}}{ephemeral}{interaction}]
 
 $onlyif[$getuservar[lvl]>=4;{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description:У вашего Буба должен быть 4 уровень и выше. Сейчас у вас $getuservar[lvl] уровень}{color:$getvar[color_error]}}{ephemeral}{interaction}]
 
