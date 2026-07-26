@@ -31,7 +31,7 @@ $onlyif[$ismanagedrole[$findrole[$get[roleId]]]==false;{newEmbed:{thumbnail:http
 $let[roleId;$interactionData[options.data[1].value]]
 $let[price;$interactionData[options.data[2].value]]
 
-$onlyperms[manageserver;{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description:Вы не можете управлять сервером}{color:$getvar[color_error]}}{ephemeral}{interaction}]
+$onlyperms[manageguild;{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description:Вы не можете управлять сервером}{color:$getvar[color_error]}}{ephemeral}{interaction}]
 $onlyif[$getglobaluservar[blacklist]==false;{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description:Вы заблокированы, обратитесь на [сервер поддержки]($getvar[invite]) для оказания вам помощи}{color:$getvar[color_error]}}{ephemeral}{interaction}]`
 }];
 
