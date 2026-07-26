@@ -10,10 +10,9 @@ $setuservar[xp;$sum[$getuservar[xp];$multi[$interactionData[options.data[0].opti
 $setuservar[korm;$sum[$getuservar[korm];$multi[$interactionData[options.data[0].options[0].value];$random[2000;4000]]]]
 $setuservar[chest_$interactionData[options.data[0].options[0].value];$sub[$getuservar[chest_$interactionData[options.data[0].options[0].value]];1]]
 
-$onlyif[$getuservar[chest_$interactionData[options.data[0].options[0].value]]>=1;{"embeds": "{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description:У вас нет сундуков данного типа }{color:RED}}", "ephemeral" : true, "options" : { "interaction" : true}}]
+$onlyif[$getuservar[chest_$interactionData[options.data[0].options[0].value]]>=1;{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description:У вас нет сундуков данного типа }{color:$getvar[color_error]}}{ephemeral}{interaction}]
 
-$onlyif[$getglobaluservar[blacklist]==false;{"embeds": "{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description:Вы заблокированы, обратитесь на [сервер поддержки]($getvar[invite]) для оказания вам помощи}{color:RED}}", "ephemeral" : true, "options" : { "interaction" : true}}]
-
+$onlyif[$getglobaluservar[blacklist]==false;{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description:Вы заблокированы, обратитесь на [сервер поддержки]($getvar[invite]) для оказания вам помощи}{color:$getvar[color_error]}}{ephemeral}{interaction}]
 $onlyif[$interactionData[options._subcommand]==open;]`
 
 })
