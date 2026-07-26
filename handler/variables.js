@@ -2,6 +2,8 @@ module.exports = {
 color_error: "#ff0000",
 bub_krutoi: "<:bubkrytoi:838837227609522226>",
 shop:  "",
+shop_roles: "",
+shop_prices: "",
 logchannel: "945968304672083978",
 servers: "945968304672083978",
 korm: "100",
