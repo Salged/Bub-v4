@@ -7,7 +7,7 @@ code: `$setvar[commands;$sum[$getvar[commands];1]]
 $channelsendmessage[$getvar[logchannel];{newEmbed:{title: Использована новая команда}{description:**Сервер:** $guildname | $guildid \n**Пользователь:** $usertag | $authorid \n**Команда:** $commandname}}]
 
 $interactionReply[Вы купили **$interactionData[options.data[0].options[1].value]** $customEmoji[q_chest_$get[type_chest]] за $get[price_full]$getservervar[wallet]]
-$setuservar[chest_$get[count];$sum[$getuservar[chest_$get[type_chest]];$interactionData[options.data[0].options[1].value]]]
+$setuservar[chest_$get[type_chest];$sum[$getuservar[chest_$get[type_chest]];$interactionData[options.data[0].options[1].value]]]
 
 $setuservar[korm;$sub[$getuservar[korm];$get[price_full]]]
 
