@@ -11,7 +11,7 @@ $interactionReply[{newEmbed:{author:Работа на строй площадк�
 
 $cooldown[50m;{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description:Ваш Буб устал, приходите через %time%}{color:$getvar[color_error]}}{ephemeral}{interaction}]
 
-$onlyif[$getuservar[lvl]>=2;{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description:У вашего Буба должен быть 2 уровень и выше. Сейчас: $getuservar[lvl]}{color:$getvar[color_error]}}{ephemeral}{interaction}]
+$onlyif[$getuservar[lvl]>=2;{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description:У вашего Буба должен быть 2 уровень и выше. Сейчас у вас $getuservar[lvl] уровень}{color:$getvar[color_error]}}{ephemeral}{interaction}]
 
 $onlyif[$getglobaluservar[blacklist]==false;{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description:Вы заблокированы, обратитесь на [сервер поддержки]($getvar[invite]) для оказания вам помощи}{color:$getvar[color_error]}}{ephemeral}{interaction}]
 `
