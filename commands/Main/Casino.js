@@ -5,15 +5,15 @@ module.exports = {
     $if: "old",
     code: `
 $if[$random[1;2;1;2]==1] 
-$interactionReply[{newEmbed:{title:Победа!}{description:\`⬆️\` ・ Вы выиграли в казино $numberSeparator[$interactionData[options.data[0].value];.]$getvar[wallet]
-  \`🧮\` ・ Текущий баланс: $getUserVar[korm]}{color:00FF66}}]
+$interactionReply[{newEmbed:{title:Победа!}{description:⬆️ ・ Вы выиграли в казино $numberSeparator[$interactionData[options.data[0].value];.]$getvar[wallet]
+🧮 ・ Текущий баланс: $getUserVar[korm]}{color:00FF66}}]
 
   $setUserVar[korm;$sum[$getUserVar[korm];$interactionData[options.data[0].value]]] 
  
   $else  
 
-  $interactionReply[{newEmbed:{title:Проигрыш...}{description:\`⬇️\` ・ Вы потеряли $numberSeparator[$interactionData[options.data[0].value];.]$getvar[wallet]
-  \`🧮\`  ・ Текущий Баланс: $getUserVar[korm]}{color:ff0000}}]
+  $interactionReply[{newEmbed:{title:Проигрыш...}{description:⬇️ ・ Вы потеряли $numberSeparator[$interactionData[options.data[0].value];.]$getvar[wallet]
+🧮  ・ Текущий Баланс: $getUserVar[korm]}{color:ff0000}}]
 
   $setUserVar[korm;$sub[$getUserVar[korm];$interactionData[options.data[0].value]]]
 
