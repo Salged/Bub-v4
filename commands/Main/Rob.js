@@ -31,9 +31,9 @@ $onlyif[$getuservar[korm]>=500;{newEmbed:{thumbnail:https://cdn.discordapp.com/e
 
 $onlyif[$getuservar[korm;$interactionData[options.data[0].value]]>=500;{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description:У пользователя которого вы хотите ограбить на руках должны быть 500$getvar[wallet]}{color:$getvar[color_error]}}{ephemeral}{interaction}]
 
-$onlyif[$isbot[$interactiondata[options.data[0].value]]==false;{"embeds": "{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description: Нельзя грабить жестянку!}{color:$getvar[color_error]}}{ephemeral}{interaction}]
+$onlyif[$isbot[$interactiondata[options.data[0].value]]==false;{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description: Нельзя грабить жестянку!}{color:$getvar[color_error]}}{ephemeral}{interaction}]
 
-$onlyif[$memberexists[$interactiondata[options.data[0].value]]==true;{"embeds": "{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description: Пользователя нет на сервере}{color:$getvar[color_error]}}{ephemeral}{interaction}]
+$onlyif[$memberexists[$interactiondata[options.data[0].value]]==true;{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description: Пользователя нет на сервере}{color:$getvar[color_error]}}{ephemeral}{interaction}]
 
 $onlyif[$interactiondata[options.data[0].value]!=$authorid;{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description: Нельзя грабить самого себя}{color:$getvar[color_error]}}{ephemeral}{interaction}]
 
