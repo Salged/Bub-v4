@@ -7,11 +7,23 @@ module.exports = {
   const { ApplicationCommandOptionType } = require("discord.js");
   const commands = client.application.commands;
 
-  // 1. leaderboard
-  await commands.create({
+  // 1. leaderboard (обновлённая)
+await commands.create({
     name: "leaderboard",
-    description: "Таблица лидеров сервера"
-  });
+    description: "Таблица лидеров сервера",
+    options: [
+        {
+            type: ApplicationCommandOptionType.String,
+            name: "type",
+            description: "Выберите тип таблицы",
+            required: true,
+            choices: [
+                { name: "💰 На руках", value: "wallet" },
+                { name: "🏦 В банке", value: "bank" }
+            ]
+        }
+    ]
+});
 
   // 2. walk
   await commands.create({
