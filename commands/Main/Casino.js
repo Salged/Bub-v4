@@ -2,7 +2,7 @@ module.exports = {
     name: "casino",
     type: "interaction",
     prototype: "slash",
-    $if: "v4",
+    $if: "old",
     code: `
 $if[$random[1;2;1;2]==1] 
 $interactionReply[{newEmbed:{title:Победа!}{description:\`⬆️\` ・ Вы выиграли в казино $numberSeparator[$interactionData[options.data[0].value];.]$getvar[wallet]
@@ -13,7 +13,7 @@ $interactionReply[{newEmbed:{title:Победа!}{description:\`⬆️\` ・ В�
   $else  
 
   $interactionReply[{newEmbed:{title:Проигрыш...}{description:\`⬇️\` ・ Вы потеряли $numberSeparator[$interactionData[options.data[0].value];.]$getvar[wallet]
-  \`🧮\`  ・ Текущий Баланс: $getUserVar[korm]}{color:ff0000}]
+  \`🧮\`  ・ Текущий Баланс: $getUserVar[korm]}{color:ff0000}}]
 
   $setUserVar[korm;$sub[$getUserVar[korm];$interactionData[options.data[0].value]]]
 
