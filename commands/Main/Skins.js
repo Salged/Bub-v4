@@ -27,7 +27,7 @@ $onlyif[$getglobaluservar[blacklist]==false;{newEmbed:{thumbnail:https://cdn.dis
         $createObject[skin_names;{"1":"Зимний Буб","2":"Дракон Буб","3":"Болотный Буб","4":"Буб с дамами","5":"Буб с гетто"}]
         $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description: Не вы вызвали данную команду}{color:$getvar[color_error]}}{ephemeral}{interaction}]
         $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==skinshop;]
-        $let[skin;$interactionData[values[0]]]
+        $let[skin;$interactionData[data.values[0]]]
     `
 },
 {
