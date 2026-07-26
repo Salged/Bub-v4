@@ -11,7 +11,7 @@ $setuservar[chest_$get[count];$sum[$getuservar[chest_$get[type_chest]];$interact
 
 $setuservar[korm;$sub[$getuservar[korm];$get[price_full]]]
 
-$onlyif[$getuservar[korm]>=$get[price_full];{"embeds": "{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description:У вас $getuservar[korm]/$get[price_full]$getservervar[wallet]}{color:$getvar[color_error]}}{ephemeral}{interaction}]
+$onlyif[$getuservar[korm]>=$get[price_full];{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description:У вас $getuservar[korm]/$get[price_full]$getservervar[wallet]}{color:$getvar[color_error]}}{ephemeral}{interaction}]
 
 $let[price_full;$multi[$get[l];$interactionData[options.data[0].options[1].value]]]
 $let[price;$multi[$get[type_chest];3000]]
