@@ -13,7 +13,7 @@ $channelsendmessage[$getvar[logchannel];{newEmbed:{title: Использован
             return '';
         ]
         
-$interactionReply[{newEmbed:{title: Добавление роли в магазин}{description:Вы добавили роль <@&$get[roleId]> ценой $get[price]$getvar[wallet] на слот $ger[id]}{color:$getglobaluservar[color]}}]
+$interactionReply[{newEmbed:{title: Добавление роли в магазин}{description:Вы добавили роль <@&$get[roleId]> ценой $get[price]$getvar[wallet] на слот $get[id]}{color:$getglobaluservar[color]}}]
 
 $onlyif[$get[price]<500001;{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description: Максимальная цена роли \`500.000\`$getvar[wallet]}{color:$getvar[color_error]}}{ephemeral}{interaction}]
 $onlyif[$get[price]>=1000;"{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description: Минимальная цена роли \`1.000\`$getvar[wallet]}{color:$getvar[color_error]}}{ephemeral}{interaction}]
@@ -25,14 +25,14 @@ $onlyif[$ismanagedrole[$findrole[$get[roleid]]]==false;{newEmbed:{thumbnail:http
 
 $onlyif[$get[id]<11;{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description: Максимально 10 слотов в магазине!}{color:$getvar[color_error]}}{ephemeral}{interaction}]
 
-$onlyif[$get[id]>=1;{"embeds": "{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description: Укажите слот от 1 до 10 включительно}{color:$getvar[color_error]}}{ephemeral}{interaction}]
+$onlyif[$get[id]>=1;{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description: Укажите слот от 1 до 10 включительно}{color:$getvar[color_error]}}{ephemeral}{interaction}]
 
 $onlyif[$isnumber[$get[id]]==true;{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description: Укажите номер слота!}{color:$getvar[color_error]}}{ephemeral}{interaction}]
 $let[id;$interactionData[options.data[0].value]]
 $let[roleId;$interactionData[options.data[1].value]]
 $let[price;$interactionData[options.data[2].value]]
         
-$onlyperms[manageserver;{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description:Вы не можете управлять сервером}{color:RED}}", "ephemeral" : true, "options" : { "interaction" : true}}]
+$onlyperms[manageserver;{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description:Вы не можете управлять сервером}{color:$getvar[color_error]}}{ephemeral}{interaction}]
 
 
 
