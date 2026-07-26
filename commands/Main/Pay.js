@@ -23,7 +23,7 @@ $onlyif[$isbot[$interactiondata[options.data[0].value]]==false;{newEmbed:{thumbn
 
 $onlyif[$memberexists[$interactiondata[options.data[0].value]]==true;{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description: Пользователя нет на сервере}{color:$getvar[color_error]}}{ephemeral}{interaction}]
 
-$onlyif[$interactiondata[options.data[0].value]!=$authorid;{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description: Нельзя передать деньги самому себе}{color:$getvar[color_error]}}{ephemeral}{interaction}]]
+$onlyif[$interactiondata[options.data[0].value]!=$authorid;{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description: Нельзя передать деньги самому себе}{color:$getvar[color_error]}}{ephemeral}{interaction}]
 
 $onlyif[$getglobaluservar[blacklist]==false;{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description:Вы заблокированы, обратитесь на [сервер поддержки]($getvar[invite]) для оказания вам помощи}{color:$getvar[color_error]}}{ephemeral}{interaction}]
 `
