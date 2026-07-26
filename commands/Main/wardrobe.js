@@ -11,5 +11,5 @@ $interactionReply[{newEmbed:{title:Ваш шкаф одежды на Буба}{t
 4️⃣ — Буб с дамами
 5️⃣ — Буб с гетто:no}{color:$getvar[color]}}{actionRow:{button:1️⃣:2:1️⃣1️⃣}{button:2️⃣:2:2️⃣2️⃣}{button:3️⃣:2:3️⃣3️⃣}{button:4️⃣:2:4️⃣4️⃣}{button:5️⃣:2:5️⃣5️⃣}}]
 
-$onlyif[$getglobaluservar[blacklist]==false;{"embeds": "{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description:Вы заблокированы, обратитесь на [сервер поддержки]($getvar[invite]) для оказания вам помощи}{color:RED}}", "ephemeral" : true, "options" : { "interaction" : true}}]`
+$onlyif[$getglobaluservar[blacklist]==false;{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description:Вы заблокированы, обратитесь на [сервер поддержки]($getvar[invite]) для оказания вам помощи}{color:$getvar[color_error]}}{ephemeral}{interaction}]`
 })
