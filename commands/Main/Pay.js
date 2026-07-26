@@ -9,7 +9,7 @@ $channelsendmessage[$getvar[logchannel];{newEmbed:{title: Использован
 $setuservar[korm;$sum[$getuservar[korm;$interactiondata[options.data[0].value]];$interactiondata[options.data[1].value]];$interactiondata[options.data[0].value]]
 $setuservar[korm;$sub[$getuservar[korm];$interactiondata[options.data[1].value]]]
 
-$interactionReply[{newEmbed:{title:Передача денег}{description:$usertag передал $interactiondata[options.data[1].value]$getvar[wallet] пользователю <@$interactiondata[options.data[0].value]>}{color:$getvar[color]}}]
+$interactionReply[$usertag, вы передали $interactiondata[options.data[1].value]$getvar[wallet] пользователю <@$interactiondata[options.data[0].value]> $getvar[bub_krutoi]]
 
 $onlyif[$getuservar[korm]>=$interactionData[options.data[1].value];{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description:На вашем балансе нет столько денег}{color:$getvar[color_error]}}{ephemeral}{interaction}]
 
