@@ -22,6 +22,8 @@ $onlyif[$getglobaluservar[blacklist]==false;{newEmbed:{thumbnail:https://cdn.dis
 
 $setTimeout[mine_remind;30m;{ "userID": "$authorid"}]
 
+$onlyif[$isuserdmenabled[$aurhorid]==true;{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description: У вас закрыты личные сообщения, я не смогу отправить вам напоминание}{color:$getvar[color_error]}}{ephemeral}{interaction}]
+
 $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title:Произошла ошибка!}{description:Не вы вызвали данную команду!}{color:$getvar[color_error]}}{ephemeral}{interaction}]
 
 $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==mineremind;]`
