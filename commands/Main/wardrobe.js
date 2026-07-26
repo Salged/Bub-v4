@@ -22,7 +22,7 @@ $onlyif[$getglobaluservar[blacklist]==false;{newEmbed:{thumbnail:https://cdn.dis
 
         $setuservar[img;$get[skinUrl]]
 
-        $onlyif[$get[currentSkin]!=$get[skinUrl];{newEmbed:{title:ℹ️ Информация}{description:Вы уже используете этот скин!}{color:$getvar[color]}}{ephemeral}{interaction}]
+        $onlyif[$get[currentSkin]!=$get[skinUrl];{newEmbed:{title: Ошибка}{description:Вы уже используете этот скин!}{color:$getvar[color]}}{ephemeral}{interaction}]
 
         $onlyif[$get[skinUrl]!=;{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title:Произошла ошибка!}{description:У вас нет этого скина!}{color:$getvar[color_error]}}{ephemeral}{interaction}]
 
@@ -31,7 +31,7 @@ $onlyif[$getglobaluservar[blacklist]==false;{newEmbed:{thumbnail:https://cdn.dis
         $let[skinName;$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$get[skin];1;Зимний Буб];2;Дракон Буб];3;Болотный Буб];4;Буб с дамами];5;Буб с гетто]]
         $let[skin;$interactionData[values[0]]]
 
-        $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];{"embeds": "{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description: Не вы вызвали данную команду}{color:$getvar[color_error]}}{ephemeral}{interaction}]
+        $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description: Не вы вызвали данную команду}{color:$getvar[color_error]}}{ephemeral}{interaction}]
 
         $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==wardrobe;] 
     `
