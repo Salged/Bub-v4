@@ -13,12 +13,12 @@ $channelsendmessage[$getvar[logchannel];{newEmbed:{title: Использован
             return '';
         ]
         
-$interactionReply[;{newEmbed:{title: Добавление роли в магазин}{description:Вы добавили роль <@&$get[roleId]> ценой $get[price]$getvar[wallet] на слот $interactionData[options.data[0].value]}{color:$getglobaluservar[color]}}]
+$interactionReply[{newEmbed:{title: Добавление роли в магазин}{description:Вы добавили роль <@&$get[roleId]> ценой $get[price]$getvar[wallet] на слот $ger[id]}{color:$getglobaluservar[color]}}]
 
-$onlyif[$interactionData[options.data[2].value]<500001;{"embeds": "{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description: Максимальная цена роли \`500.000\`$getvar[wallet]}{color:$getvar[color_error]}}{ephemeral}{interaction}]
-$onlyif[$interactionData[options.data[2].value]>=1000;{"embeds": "{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description: Минимальная цена роли \`1.000\`$getvar[wallet]}{color:$getvar[color_error]}}{ephemeral}{interaction}]
+$onlyif[$get[price]<500001;{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description: Максимальная цена роли \`500.000\`$getvar[wallet]}{color:$getvar[color_error]}}{ephemeral}{interaction}]
+$onlyif[$get[price]>=1000;"{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description: Минимальная цена роли \`1.000\`$getvar[wallet]}{color:$getvar[color_error]}}{ephemeral}{interaction}]
 
-$onlyif[$roleposition[$highestrole[$clientid]]<$roleposition[$interactionData[options.data[1].value]];{"embeds": "{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description:Указанная роль выше роли бота}{color:$getvar[color_error]}}{ephemeral}{interaction}]
+$onlyif[$roleposition[$userhighestrole[$clientid]]<$roleposition[$get[roleId]];{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description:Указанная роль выше роли бота}{color:$getvar[color_error]}}{ephemeral}{interaction}]
    
 $onlyif[$ismanagedrole[$findrole[$get[roleid]]]==false;{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description:Роль интеграции нельзя добавлять в магазин}{color:$getvar[color_error]}}{ephemeral}{interaction}]
 
