@@ -15,7 +15,6 @@ $interactionReply[Выберите скин из списка ниже{actionRow
 $onlyif[$getglobaluservar[blacklist]==false;{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description:Вы заблокированы, обратитесь на [сервер поддержки]($getvar[invite]) для оказания вам помощи}{color:$getvar[color_error]}}{interaction}{ephemeral}]`
 },
                   {
-    name: "wardrobe_select",
     type: "interaction",
     prototype: "selectMenu",
     code: `
@@ -31,5 +30,9 @@ $onlyif[$getglobaluservar[blacklist]==false;{newEmbed:{thumbnail:https://cdn.dis
         $let[currentSkin;$getuservar[img]]
         $let[skinName;$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$get[skin];1;Зимний Буб];2;Дракон Буб];3;Болотный Буб];4;Буб с дамами];5;Буб с гетто]]
         $let[skin;$interactionData[values[0]]]
+
+        $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];{"embeds": "{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description: Не вы вызвали данную команду}{color:$getvar[color_error]}}{ephemeral}{interaction}]
+
+        $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==wardrobe;] 
     `
 }];
