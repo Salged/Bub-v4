@@ -26,7 +26,7 @@ $onlyif[$get[price]>=1000;{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis
 
 $onlyif[$roleposition[$userhighestrole[$clientid]]>$roleposition[$get[roleId]];{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description:Указанная роль выше роли бота}{color:$getvar[color_error]}}{ephemeral}{interaction}]
 
-$onlyif[$ismanagedrole[$findrole[$get[roleId]]]==false;{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description:Роль интеграции нельзя добавлять в магазин}{color:$getvar[color_error]}}{ephemeral}{interaction}]
+$onlyif[$isrolemanaged[$findrole[$get[roleId]]]==false;{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description:Роль интеграции нельзя добавлять в магазин}{color:$getvar[color_error]}}{ephemeral}{interaction}]
 
 $let[roleId;$interactionData[options.data[1].value]]
 $let[price;$interactionData[options.data[2].value]]
