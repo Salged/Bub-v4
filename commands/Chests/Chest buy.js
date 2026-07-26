@@ -11,7 +11,7 @@ $setuservar[chest_$get[p];$sum[$getuservar[chest_$get[p]];$interactionData[optio
 
 $setuservar[korm;$sub[$getuservar[korm];$get[d]]]
 
-$onlyif[$getuservar[korm]>=$get[d];{"embeds": "{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description:У вас $getuservar[korm]/$get[d]$getservervar[wallet]}{color:RED}}", "ephemeral" : true, "options" : { "interaction" : true}}]
+$onlyif[$getuservar[korm]>=$get[d];{"embeds": "{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description:У вас $getuservar[korm]/$get[d]$getservervar[wallet]}{color:RED}}{ephemeral}{interaction}]
 
 $let[d;$multi[$get[l];$interactionData[options.data[0].options[1].value]]]
 $let[l;$multi[$get[p];3000]]
