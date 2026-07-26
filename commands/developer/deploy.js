@@ -380,7 +380,7 @@ await commands.create({
 
 // 24. science (как mine)
 await commands.create({
-    name: "science",
+    name: "scientist",
     description: "Работа учёным"
 });
 
