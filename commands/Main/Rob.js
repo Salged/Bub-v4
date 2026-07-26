@@ -11,13 +11,13 @@ $if[$randomtext[1;2;1;2]==1]
 $setuservar[korm;$sum[$getuservar[korm];$get[amount]]]
 $setuservar[korm;$sub[$getuservar[korm;$interactiondata[options.data[0].value]];$get[amount]];$interactiondata[options.data[0].value]]
 
-$interactionReply[$usertag украл у <@$interactiondata[options.data[0].value]> $get[amount]$getservervar[wallet] {actionRow:{button:Напомнить:1:robremind_$authorid:false:⏱️}}]  
+$interactionReply[$usertag украл у <@$interactiondata[options.data[0].value]> $get[amount]$getvar[wallet] {actionRow:{button:Напомнить:1:robremind_$authorid:false:⏱️}}]  
  
 $elseif[$randomtext[1;2;1;2]==2]
 $setuservar[korm;$sub[$getuservar[korm];$get[rob]]]
 $setuservar[korm;$sum[$getuservar[korm;$interactiondata[options.data[0].value]];$get[rob]];$interactiondata[options.data[0].value]]
 
-$interactionReply[$usertag попытался украсть деньги у <@$interactiondata[options.data[0].value]>, но был пойман и заплатил штраф $get[rob]$getservervar[wallet] {actionRow:{button: Напомнить:1:robremind_$authorid:false:⏱️}}]
+$interactionReply[$usertag попытался украсть деньги у <@$interactiondata[options.data[0].value]>, но был пойман и заплатил штраф $get[rob]$getvar[wallet] {actionRow:{button: Напомнить:1:robremind_$authorid:false:⏱️}}]
 $let[rob;$round[$divide[$get[amount];2]]]
 $endelseif
 $endif
