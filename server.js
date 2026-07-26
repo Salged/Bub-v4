@@ -1,7 +1,7 @@
 const { AoiClient } = require("aoi.js");
 const config = require("./config.json"); // если есть файл конфига
 
-const bot = new AoiClient({
+const client = new AoiClient({
   token: process.env.TOKEN || config.BotToken,
 
   prefix: ["+", "<@$clientID>", "<@!$clientID>"],
@@ -54,5 +54,5 @@ const bot = new AoiClient({
 });
 
 // Загрузка команд из папки ./commands/ (второй аргумент – логировать загрузку)
-bot.loadCommands("./commands/", true);
-bot.variables(require("./handler/variables.js"));
+client.loadCommands("./commands/", true);
+client.variables(require("./handler/variables.js"));
