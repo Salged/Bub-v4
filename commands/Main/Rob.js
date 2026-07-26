@@ -1,6 +1,6 @@
 module.exports = [{
     name: "rob",
-    $if: "v4",
+    $if: "old",
     type: "interaction",
     prototype: "slash",
     code: `$setvar[commands;$sum[$getvar[commands];1]]
