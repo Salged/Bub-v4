@@ -4,8 +4,8 @@ module.exports = [{
     prototype: "slash",
     code: `$setvar[commands;$sum[$getvar[commands];1]]
 $channelsendmessage[$getvar[logchannel];{newEmbed:{title: Использована новая команда}{description:**Сервер:** $guildname | $guildid \n**Пользователь:** $usertag | $authorid \n**Команда:** $commandname}}]
-$setservervar[shop_roles;$get[newRoles]]
-$setservervar[shop_prices;$get[newPrices]]
+$setguildvar[shop_roles;$get[newRoles]]
+$setguildvar[shop_prices;$get[newPrices]]
 
 $interactionReply[{newEmbed:{title: Добавление роли в магазин}{description:Вы добавили роль <@&$get[roleId]> ценой $get[price]$getvar[wallet] в магазин}{color:$getvar[color]}}]
 
