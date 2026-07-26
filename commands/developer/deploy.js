@@ -18,7 +18,7 @@ await commands.create({
             description: "Выберите тип таблицы",
             required: true,
             choices: [
-                { name: "💰 На руках", value: "wallet" },
+                { name: "💰 На руках", value: "korm" },
                 { name: "🏦 В банке", value: "bank" }
             ]
         }
