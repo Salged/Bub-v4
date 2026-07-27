@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = [{
     name: "store",
     type: "interaction",
     prototype: "slash",
