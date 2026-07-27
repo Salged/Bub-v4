@@ -25,7 +25,7 @@ $textSplit[$if[$get[skin]==1;Зимний Буб,20000,https://media.discordapp.
         $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description: Не вы вызвали данную команду}{color:$getvar[color_error]}}{ephemeral}{interaction}]
         $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==skinshop;]
 
-$let[skin;$interactionData[data.values[0]]]
+$let[skin;$interactionData[values[0]]]
     `
 },
 {
