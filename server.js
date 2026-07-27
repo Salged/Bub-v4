@@ -56,3 +56,8 @@ const client = new AoiClient({
 // Загрузка команд из папки ./commands/ (второй аргумент – логировать загрузку)
 client.loadCommands("./commands/", true);
 client.variables(require("./handler/variables.js"));
+client.awaitedCommand({
+    name: "shop_line",
+    code: `<@&$splitText[1]> — $splitText[2]$getvar[wallet]
+$textSplit[$message[1];:]`
+});
