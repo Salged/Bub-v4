@@ -9,17 +9,18 @@ $channelsendmessage[$getvar[logchannel];{newEmbed:{title: Использован
 $setuservar[korm;$sub[$getuservar[korm;$interactiondata[options.data[0].value]];$interactiondata[options.data[1].value]];$interactiondata[options.data[0].value]]
 $interactionReply[{newEmbed:{title:Снятие денег с баланса}{description:$usertag забрал у <@$interactiondata[options.data[0].value]> $interactiondata[options.data[1].value]$getvar[wallet]}{color:$getvar[color]}}]
 
-$onlyif[$getuservar[korm;$interactiondata[options.data[0].value]]>=$interactiondata[options.data[1].value];{"embeds": "{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description:У пользователя нео столько денег на балансе}{color:RED}}", "ephemeral" : true, "options" : { "interaction" : true}}]
+$onlyif[$getuservar[korm;$interactiondata[options.data[0].value]]>=$interactiondata[options.data[1].value];{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description:У пользователя нет столько денег на балансе}{color:$getvar[color_error]}}{ephemeral}{interaction}]
 
-$onlyif[$interactionData[options.data[1].value]<100001;{"embeds": "{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description: Укажите число до 100.000}{color:RED}}", "ephemeral" : true, "options" : { "interaction" : true}}]
+$onlyif[$interactionData[options.data[1].value]<100001;{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description: Укажите число до 100.000}{color:$getvar[color_error]}}{ephemeral}{interaction}]
 
-$onlyif[$interactionData[options.data[1].value]>=10;{"embeds": "{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description: Укажите число больше 10}{color:RED}}", "ephemeral" : true, "options" : { "interaction" : true}}]
+$onlyif[$interactionData[options.data[1].value]>=10;{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description: Укажите число больше 10}{color:$getvar[color_error]}}{ephemeral}{interaction}]
 
-$onlyif[$isnumber[$interactionData[options.data[1].value]]==true;{"embeds": "{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description: Укажите число!}{color:RED}}", "ephemeral" : true, "options" : { "interaction" : true}}]
+$onlyif[$isnumber[$interactionData[options.data[1].value]]==true;{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description: Укажите число!}{color:$getvar[color_error]}}{ephemeral}{interaction}]
 
-$onlyif[$memberexists[$interactiondata[options.data[0].value]]==true;{"embeds": "{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description: Пользователя нет на сервере}{color:RED}}", "ephemeral" : true, "options" : { "interaction" : true}}]
+$onlyif[$memberexists[$interactiondata[options.data[0].value]]==true;{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description: Пользователя нет на сервере}{color:$getvar[color_error]}}{ephemeral}{interaction}]
 
-$onlyperms[manageserver;{"embeds": "{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description:Вы не администратор}{color:RED}}", "ephemeral" : true, "options" : { "interaction" : true}}]
+$onlyperms[manageguild;{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description:Вы не администратор}{color:$getvar[color_error]}}{ephemeral}{interaction}]
 
-$onlyif[$getglobaluservar[blacklist]==false;{"embeds": "{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description:Вы заблокированы, обратитесь на [сервер поддержки]($getvar[invite]) для оказания вам помощи}{color:RED}}", "ephemeral" : true, "options" : { "interaction" : true}}]`
+$onlyif[$getglobaluservar[blacklist]==false;{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description:Вы заблокированы, обратитесь на [сервер поддержки]($getvar[invite]) для оказания вам помощи}{color:$getvar[color_error]}}{ephemeral}{interaction}]
+`
     })
