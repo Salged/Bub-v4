@@ -5,17 +5,58 @@ module.exports = [{
     code: `$setvar[commands;$sum[$getvar[commands];1]]
 $channelsendmessage[$getvar[logchannel];{newEmbed:{title: Использована новая команда}{description:**Сервер:** $guildname | $guildid \n**Пользователь:** $usertag | $authorid \n**Команда:** $commandname}}]
 
-$interactionReply[{newEmbed:{title: Магазин сервера $guildName}{description:$get[shopLines]}{color:$getvar[color]}}{actionRow:{selectMenu:buyrole_$authorid: Выберите роль для покупки:1:1: false:$get[shopOptions]}}]
+$djsEval[
+(async () => {
+  const { EmbedBuilder, ActionRowBuilder, StringSelectMenuBuilder } = require("discord.js");
 
-$let[shopOptions;$textSplitMap[shop_option]]
-$let[shopLines;$textSplitMap[shop_line]]
-$textSplit[$get[shop];,]
+  const shop = "$get[shop]";
+  const walletEmoji = "$getvar[wallet]";
+  const color = "$getvar[color]";
+  const guildName = "$guildName";
 
-$onlyif[$get[shop]!=;Магазин сервера пуст{interaction}]
+  if (!shop) {
+    await interaction.reply({
+      content: "Магазин сервера пуст",
+    });
+    return "";
+  }
+
+  const entries = shop.split(",").map((entry) => {
+    const [roleId, price] = entry.split(":");
+    return { roleId, price };
+  });
+
+  const lines = entries.map((e, i) => \`\${i + 1}. <@&\${e.roleId}> — \${e.price}\${walletEmoji}\`).join("\\n");
+
+  const embed = new EmbedBuilder()
+    .setTitle(\`Магазин сервера \${guildName}\`)
+    .setDescription(lines)
+    .setColor(color);
+
+  const options = entries.slice(0, 25).map((e) => ({
+    label: \`Роль за \${e.price}\${walletEmoji}\`,
+    description: "Нажмите чтобы купить эту роль",
+    value: \`\${e.roleId}-\${e.price}\`,
+  }));
+
+  const selectMenu = new StringSelectMenuBuilder()
+    .setCustomId(\`buyrole_\${interaction.user.id}\`)
+    .setPlaceholder("Выберите роль для покупки")
+    .addOptions(options);
+
+  const row = new ActionRowBuilder().addComponents(selectMenu);
+
+  await interaction.reply({
+    embeds: [embed],
+    components: [row],
+  });
+
+  return "";
+})()
+]
 $let[shop;$getguildvar[shop]]
 
-$onlyif[$getglobaluservar[blacklist]==false;{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description:Вы заблокированы, обратитесь на [сервер поддержки]($getvar[invite]) для оказания вам помощи}{color:$getvar[color_error]}}{ephemeral}{interaction}]
-`
+$onlyif[$getglobaluservar[blacklist]==false;{newEmbed:{thumbnail:https://cdn.discordapp.com/emojis/606562703917449226.gif?v=1&size=4096}{title: Произошла ошибка!}{description:Вы заблокированы, обратитесь на [сервер поддержки]($getvar[invite]) для оказания вам помощи}{color:$getvar[color_error]}}{ephemeral}{interaction}]`
 },
 {
     name: "buy_role",
