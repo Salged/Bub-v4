@@ -64,6 +64,6 @@ $textSplit[$message[1];:]`
 
 client.awaitedCommand({
     name: "shop_option",
-    code: `{stringInput:Роль за $splitText[2]$getvar[wallet]:$splittext[1]-$splittext[2]:Нажмите чтобы купить эту роль:false}
+    code: `{stringInput:Роль за $splitText[2]:$splittext[1]-$splittext[2]:Нажмите чтобы купить эту роль:false:$getvar[wallet]}
 $textSplit[$message[1];:]`
 });
