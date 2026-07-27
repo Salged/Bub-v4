@@ -58,6 +58,12 @@ client.loadCommands("./commands/", true);
 client.variables(require("./handler/variables.js"));
 client.awaitedCommand({
     name: "shop_line",
-    code: `<@&$splitText[1]> — $splitText[2]$getvar[wallet]
+    code: `$sum[$index;1]. <@&$splitText[1]> — $splitText[2]$getvar[wallet]
+$textSplit[$message[1];:]`
+});
+
+client.awaitedCommand({
+    name: "shop_option",
+    code: `{stringInput:$rolename[$splitText[1]] — $splitText[2]:$message[1]::$getvar[wallet]}
 $textSplit[$message[1];:]`
 });
