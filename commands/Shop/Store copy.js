@@ -15,41 +15,51 @@ $djsEval[
   const guildName = "$guildName";
 
   if (!shop) {
-    await interaction.reply({
-      content: "Магазин сервера пуст",
-    });
+    await interaction.reply({ content: "Магазин сервера пуст" });
     return "";
   }
 
-  const entries = shop.split(",").map((entry) => {
-    const [roleId, price] = entry.split(":");
-    return { roleId, price };
+  const rawEntries = shop.split(",");
+  const entries = rawEntries.map((entry) => {
+    const parts = entry.split(":");
+    const roleId = parts.at(0);
+    const price = parts.at(1);
+    return { roleId: roleId, price: price };
   });
 
-  const lines = entries.map((e, i) => \`\${i + 1}. <@&\${e.roleId}> — \${e.price}\${walletEmoji}\`).join("\\n");
+  let lines = "";
+  let optionsList = new Array();
+  let counter = 0;
+  for (const e of entries) {
+    counter = counter + 1;
+    lines = lines + counter + ". <@&" + e.roleId + "> — " + e.price + walletEmoji + "\\n";
+    if (counter <= 25) {
+      optionsList.push({
+        label: "Роль за " + e.price + walletEmoji,
+        description: "Нажмите чтобы купить эту роль",
+        value: e.roleId + "-" + e.price,
+      });
+    }
+  }
 
   const embed = new EmbedBuilder()
-    .setTitle(\`Магазин сервера \${guildName}\`)
+    .setTitle("Магазин сервера " + guildName)
     .setDescription(lines)
     .setColor(color);
 
-  const options = entries.slice(0, 25).map((e) => ({
-    label: \`Роль за \${e.price}\${walletEmoji}\`,
-    description: "Нажмите чтобы купить эту роль",
-    value: \`\${e.roleId}-\${e.price}\`,
-  }));
-
   const selectMenu = new StringSelectMenuBuilder()
-    .setCustomId(\`buyrole_\${interaction.user.id}\`)
+    .setCustomId("buyrole_" + interaction.user.id)
     .setPlaceholder("Выберите роль для покупки")
-    .addOptions(options);
+    .addOptions(optionsList);
 
   const row = new ActionRowBuilder().addComponents(selectMenu);
 
-  await interaction.reply({
-    embeds: [embed],
-    components: [row],
-  });
+  const embedsList = new Array();
+  embedsList.push(embed);
+  const rowsList = new Array();
+  rowsList.push(row);
+
+  await interaction.reply({ embeds: embedsList, components: rowsList });
 
   return "";
 })()
