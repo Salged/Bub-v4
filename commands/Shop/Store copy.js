@@ -5,7 +5,7 @@ module.exports = [{
     code: `$setvar[commands;$sum[$getvar[commands];1]]
 $channelsendmessage[$getvar[logchannel];{newEmbed:{title: Использована новая команда}{description:**Сервер:** $guildname | $guildid \n**Пользователь:** $usertag | $authorid \n**Команда:** $commandname}}]
 
-$interactionReply[{newEmbed:{title: Магазин сервера $serverName}{description:$get[shopLines]}{color:$getvar[color]}}{actionRow:{selectMenu:buyrole_$authorid: Выберите роль для покупки:1:1: false:$get[shopOptions]}}]
+$interactionReply[{newEmbed:{title: Магазин сервера $guildName}{description:$get[shopLines]}{color:$getvar[color]}}{actionRow:{selectMenu:buyrole_$authorid: Выберите роль для покупки:1:1: false:$get[shopOptions]}}]
 
 $let[shopOptions;$textSplitMap[shop_option]]
 $let[shopLines;$textSplitMap[shop_line]]
