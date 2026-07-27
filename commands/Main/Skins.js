@@ -6,7 +6,7 @@ module.exports = [{
 $channelsendmessage[$getvar[logchannel];{newEmbed:{title: Использована новая команда}{description:**Сервер:** $guildname | $guildid \n**Пользователь:** $usertag | $authorid \n**Команда:** $commandname}}]
 $interactionReply[{newEmbed:{title:Магазин скинов Буба}{thumbnail:$userAvatar}{description:Выберите скин из списка ниже, чтобы посмотреть превью и цену}{color:$getvar[color]}}{actionRow:{selectMenu:skinshop_$authorid: Выберите скин:1:1: false:
 {stringInput:Зимний Буб — 20.000:1:: false:$getvar[wallet]}:
-{stringInput:Дракон Буб — 35.000:3:: false:$getvar[wallet]}:
+{stringInput:Дракон Буб — 35.000:2:: false:$getvar[wallet]}:
 {stringInput:Болотный Буб — 50.000:3:: false:$getvar[wallet]}:
 {stringInput:Буб с дамами — 100.000:4:: false:$getvar[wallet]}:
 {stringInput:Буб с гетто — 150.000:5:: false:$getvar[wallet]}}}]
@@ -55,7 +55,7 @@ $textSplit[$if[$get[skin]==1;Зимний Буб,20000,https://media.discordapp.
         $interactionUpdate[{newEmbed:{title:Магазин скинов Буба}{thumbnail:$userAvatar}{description:Выберите скин из списка ниже, чтобы посмотреть превью и цену}{color:$getvar[color]}}{actionRow:{selectMenu:skinshop_$authorid: Выберите скин:1:1: false:
 {stringInput:Зимний Буб — 20.000:1:: false:$getvar[wallet]}:
 {stringInput:Дракон Буб — 35.000:3:: false:$getvar[wallet]}:
-{stringInput:Болотный Буб — 50.000:3:: false:$getvar[wallet]}:
+{stringInput:Болотный Буб — 50.000:2:: false:$getvar[wallet]}:
 {stringInput:Буб с дамами — 100.000:4:: false:$getvar[wallet]}:
 {stringInput:Буб с гетто — 150.000:5:: false:$getvar[wallet]}}}]
 
